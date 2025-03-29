@@ -13,6 +13,7 @@
     "axios": "^1.8.4",
     "framer-motion": "^12.6.2",
     "lucide-react": "^0.485.0",
+    "ogl": "^1.0.11",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },

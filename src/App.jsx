@@ -6,6 +6,11 @@ import { RecentSearches } from './components/RecentSearches';
 import { SearchBar } from './components/SearchBar';
 import { ThemeToggle } from './components/ThemeToggle';
 import { WeatherCard } from './components/WeatherCard';
+import Iridescence from '../ui/Iridescence/Iridescence';
+import Magnet from '../ui/Magnet/Magnet'
+import FadeContent from '../ui/FadeContent/FadeContent'
+
+
 
 const API_KEY = 'e3cde117906f598c934a956a7887fc84'; // Replace with your OpenWeatherMap API key
 const MAX_RECENT_SEARCHES = 5;
@@ -52,50 +57,56 @@ function App() {
   }, []);
 
   return (
+    
     <div className="min-h-screen bg-blue-300 dark:bg-gray-900 transition-colors">
+      <FadeContent blur={true} duration={2000} easing="ease-out" initialOpacity={0}>
       <ThemeToggle />
-
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col items-center justify-center gap-6">
-          <h1 className="text-3xl font-bold text-gray-800 dark:text-white mb-4">
+          <h1 className="text-4xl font-bold text-gray-800 dark:text-white mb-4">
             Weather Dashboard
           </h1>
 
           <SearchBar onSearch={fetchWeather} isLoading={isLoading} />
           <RecentSearches searches={recentSearches} onSelect={fetchWeather} />
-
+          {/* <Magnet padding={50} disabled={false} magnetStrength={5}> */}
+          
           <AnimatePresence mode="wait">
             {isLoading ? (
               <motion.div
-                key="loader"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                className="flex items-center justify-center"
+              key="loader"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="flex items-center justify-center"
               >
                 <div className="w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin" />
               </motion.div>
             ) : error ? (
               <motion.div
-                key="error"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                className="flex items-center gap-2 text-red-500 bg-red-100 dark:bg-red-900/20 px-4 py-2 rounded-lg"
+              key="error"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              className="flex items-center gap-2 text-red-500 bg-red-100 dark:bg-red-900/20 px-4 py-2 rounded-lg"
               >
                 <AlertCircle className="w-5 h-5" />
                 <p>{error}</p>
               </motion.div>
             ) : weatherData ? (
               <WeatherCard
-                key="weather"
-                data={weatherData}
-                onRefresh={() => fetchWeather(weatherData.name)}
+              key="weather"
+              data={weatherData}
+              onRefresh={() => fetchWeather(weatherData.name)}
               />
             ) : null}
           </AnimatePresence>
+          
+            {/* </Magnet> */}
         </div>
       </div>
+
+      </FadeContent>
     </div>
   );
 }
