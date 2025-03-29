@@ -1,5 +1,3 @@
-// This file defines the structure of weather-related data.
-
 export const WeatherData = {
     name: '',
     main: {
