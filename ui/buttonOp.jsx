@@ -1,10 +1,7 @@
 import React from 'react';
 
 const Button = () => {
-    const handleClick = (url) => {
-        console.log(`Opening: ${url}`);
-        window.open(url, '_blank', 'noopener,noreferrer');
-      };
+
   return (
     <div className="flex items-center gap-4">
       <div className="social-button">

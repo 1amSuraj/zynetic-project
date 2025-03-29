@@ -10,10 +10,7 @@ import {
   SearchBar,
   ThemeToggle,
   WeatherCard,
-  Iridescence,
-  Magnet,
-  FadeContent,
-  Button,
+  FadeContent
 } from "./imports";
 
 
