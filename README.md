@@ -1,12 +1,82 @@
-# React + Vite
+# Weather Dashboard 🌤️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Project Overview
+This is a **Weather Dashboard Web App** built with **Vite + React + JSX + Tailwind CSS**. It allows users to search for any city and view real-time weather information using the **OpenWeatherMap API**.
 
-Currently, two official plugins are available:
+## ✨ Features
+- 🌍 **Search for any city** to get live weather updates
+- 🌡️ **Displays weather details** (Temperature, Humidity, Wind Speed, Weather Condition, and Icon)
+- 🔍 **Autocomplete city suggestions** while typing
+- 🌑🌞 **Dark/Light mode toggle**
+- 📜 **Recent search history** (last 5 cities)
+- 🔄 **Refresh button** to update weather data
+- 🖥️ **Fully responsive** (mobile & desktop support)
+- ⚡ **Fast performance** with Vite
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Tech Stack
+- **Frontend**: React, JSX, Vite
+- **Styling**: Tailwind CSS
+- **API**: OpenWeatherMap API
+- **State Management**: React Hooks
 
-## Expanding the ESLint configuration
+## 🎯 Installation & Setup
+1. **Clone the repository**
+   ```sh
+   git clone https://github.com/your-username/weather-dashboard.git
+   cd weather-dashboard
+   ```
+2. **Install dependencies**
+   ```sh
+   npm install
+   ```
+3. **Get OpenWeatherMap API Key**
+   - Register at [OpenWeatherMap](https://openweathermap.org/api)
+   - Copy your API key
+   - Create a **`.env`** file in the root directory and add:
+     ```sh
+     VITE_WEATHER_API_KEY=your_api_key_here
+     ```
+4. **Run the project**
+   ```sh
+   npm run dev
+   ```
+5. **Open the app in your browser**
+   - Default URL: `http://localhost:5173`
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🔌 API Integration
+- **API Used**: [OpenWeatherMap Current Weather API](https://openweathermap.org/current)
+- **Example API Call:**
+  ```sh
+  https://api.openweathermap.org/data/2.5/weather?q={city}&appid={YOUR_API_KEY}&units=metric
+  ```
+- **Response Data Includes:**
+  - City Name, Temperature, Humidity, Wind Speed, Weather Condition, and Icon.
+
+## 🚀 Deployment
+To deploy your project:
+1. **Build the project**
+   ```sh
+   npm run build
+   ```
+2. **Deploy on Vercel / Netlify**
+   - Follow their respective guides for Vite projects.
+
+## 📌 Folder Structure
+```
+📂 weather-dashboard/
+├── 📂 src/
+│   ├── 📂 components/        # Reusable UI components
+│   ├── 📂 styles/            # Tailwind global styles
+│   ├── 📂 types/             # TypeScript types
+│   ├── 📄 App.jsx            # Main App component
+│   ├── 📄 main.jsx           # React entry point
+├── 📄 index.css              # Global styles
+├── 📄 vite.config.js         # Vite configuration
+└── 📄 .env                   # API key storage
+```
+
+## 📜 License
+This project is open-source and free to use. Feel free to contribute!
+
+🚀 **Happy Coding!** 🎉
+
