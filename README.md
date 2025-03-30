@@ -22,8 +22,7 @@ This is a **Weather Dashboard Web App** built with **Vite + React + JSX + Tailwi
 ## 🎯 Installation & Setup
 1. **Clone the repository**
    ```sh
-   git clone https://github.com/your-username/weather-dashboard.git
-   cd weather-dashboard
+   https://github.com/1amSuraj/zynetic-project.git
    ```
 2. **Install dependencies**
    ```sh
@@ -78,5 +77,4 @@ To deploy your project:
 ## 📜 License
 This project is open-source and free to use. Feel free to contribute!
 
-🚀 **Happy Coding!** 🎉
 
